@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma School Fest - Events</title>
+    <style>
+        body {
+            /* font-family: Arial, sans-serif; */
+            background-color: black;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            background-image: url('./EVENT\ PAGE\ BG.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        
+
+        .categories {
+            background-image: url('bgs/EVENT\ PAGE\ BG.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 100px;
+            /* padding-left: 10em; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+:root{
+    --pad2:3em;
+}
+.categories div a:hover{
+background-color: #f70b52;
+color: white;
+}
+
+        .categories div h1 {
+            color: white;
+            font-size: 100px;
+            font-size: 100px;
+  background-image: linear-gradient(43deg, #4158D0 , #C850C0 , #FFCC70 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200%;
+  animation: gradientAnimation 1s linear infinite;
+        }
+        @keyframe gradientAnimation{
+            0%{
+                background-position:200% 50%
+            }
+            100%{
+                background-position:0% 50%
+            }
+        }
+
+        .categories div a {
+            display: inline-block;
+            margin-top: 10px;
+    padding: 7px 14px;
+    font-size: 16px;
+    /* font-family: Arial, sans-serif; */
+    text-decoration: none;
+    color: #f70b52;
+    border: 1px solid #f70b52;
+    border-radius: 5px;
+    background-color: transparent; /* Makes sure background is transparent */
+    transition: background-color 0.3s, color 0.3s;
+        }
+
+        .categories div p {
+            color: white;
+            /* color: #000000; */
+
+            left:var(--pad2)
+
+        }
+    </style>
+    <link rel="stylesheet" href="global.css">
+
+    <link rel="icon" type="image/png" href="jctsm6q4.png">
+
+</head>
+<div id="backbtn"></div>
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="./nhvpslogo.jpeg"></a>
+            <h1>Enigma</h1>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="aboutoc.html" class="nav-link">AboutOC</a>
+                <a href="register.html" class="nav-link">Register</a>
+            </div>
+    </nav>
+
+
+   <div class="supwrap">
+    <div class="spl"></div>
+    <div class="cent"> <div class="categories">
+        <div class="A">
+            <h1>Category A</h1>
+            <p>For Class 1 to 4</p>
+            <a href="./CatA.html"> View Events</a>
+        </div>
+        <div class="B">
+            <h1>Category B</h1>
+            <p>For Class 5 to 8</p>
+            <a href="./CatB.html"> View Events</a>
+        </div>
+        <div class="C">
+            <h1>Category C</h1>
+            <p>For Class 9 to 12</p>
+            <a href="./CatC.html"> View Events</a>
+        </div>
+    </div></div>
+<div class="spr"></div>
+   </div>
+    <script>
+        // Navbar scroll behavior
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+<script src="global.js"></script>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .fl h1{
+            font-size: 2em;
+        }
+        .fl{
+            background-color: rgb(42, 41, 41);
+            padding:10px 10px 10px 10px;
+            border-radius: 15px;
+        }
+        .typewriter {
+    width: 20.1ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    /* font-family: monospace; */
+    font-size: 2em;
+    color: white;
+    animation: typing 2s steps(11), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 20ch; } /* Ensure width matches the content length */
+}
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: white; }
+}
+
+       
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="./index.html" class="logo">
+            <img src="./nhvpslogo.jpeg"></a>
+
+            <h1>Enigma</h1>
+        </a>
+        <div class="nav-links">
+            <a href="./index.html" class="nav-link">Home</a>
+            <a href="./events.html" class="nav-link">Events</a>
+            <a href="./aboutoc.html" class="nav-link">AboutOC</a>
+            <a href="register.html" class="nav-link">Register</a>
+        </div>
+
+    </nav>
+    <div class="space"></div>
+    <div class="supwrap">
+        <div class="spl"></div>
+        <div class="cent">
+            <div class="wrapper">
+                <div class="fl">
+                    <!-- <img src="./imgs/supernova.jpeg" alt=""> -->
+                    <div class="typewritr"style="background-color:rgb(42, 41, 41);">
+                        <!-- <div class="typed"><h1 style="color: white;">CATEGORY A</h1></div> -->
+                         <H1>CATEGORY A</H1>
+                    </div>
+                    <div class="ll">
+                        <a href="./CatA.html" class="learn-more">learn-more</a>
+                    <a href="https://forms.gle/5N2MeqcdXtAqhxAC9" class="learn-more"> register</a>
+                    </div>
+                </div>
+                <div class="fl">
+                    <!-- <img src="./imgs/stardust.png" alt=""> -->
+                    <div class="typewritr"style="background-color:rgb(42, 41, 41);">
+                       <h1>CATEGORY B</h1>
+                    </div>
+                    
+                    <div class="ll">
+                        <a href="./CatB.html" class="learn-more">learn-more</a>
+                    <a href="https://forms.gle/8uxdoC19cJsWpSqK7" class="learn-more"> register</a>
+                    </div>
+                </div>
+                <div class="fl">
+                    <!-- <img src="./imgs/stellar.jpeg" alt=""> -->
+                    <div class="typewritr"style="background-color:rgb(42, 41, 41);">
+                        <h1>CATEGORY C</h1>
+                    </div>
+                    
+                    <div class="ll">
+                        <a href="./CatC.html" class="learn-more">learn-more</a>
+                    <a href="https://forms.gle/2sukEmJjhgR2kTNE6" class="learn-more"> register</a>
+                    </div>
+                
+                
+        </div>
+        <div class="spr"></div>
+    </div>
+</body>
+<!-- <div id="backbtn"></div> -->
+
+<script src="./global.js"></script>
+<script>
+    function typeWriter(element, text, speed) {
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        type();
+    }
+
+    window.onload = () => {
+        const elements = document.querySelectorAll('.typewriter h1');
+        elements.forEach(element => {
+            typeWriter(element, element.textContent, 100); // Adjust speed as needed
+        });
+    };
+</script>
+
+</html>

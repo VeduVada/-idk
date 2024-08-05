@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category A - Enigma</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        @media (max-width: 768px) {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+        body {
+            margin: 0;
+            background-color: black;
+            font-family: 'Lulo Clean', sans-serif;
+            color: white;
+            background-image: url("./CATEGORY\ A\ BG.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .megawrap {
+            margin: 0;
+            padding: 20px;
+            /* background-image: url('./bgs/CATEGORY\ A\ BG.png'); */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .megawrap > h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            gap: 20px;
+        }
+        .event-card {
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+        }
+        .event-logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .event-card h2 {
+            margin: 10px 0;
+        }
+        .event-card p {
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .short-desc {
+            display: block;
+        }
+        .full-desc {
+            display: none;
+        }
+        .read-more {
+            display: block;
+            color: #888;
+            text-decoration: none;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .learn-more {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .learn-more:hover {
+            background-color: #ff0000;
+            color: white;
+        }
+        .learn-more span {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .learn-more:hover span {
+            transform: translateX(5px);
+        }
+        .footer {
+            background-color: red;
+            padding: 20px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <h1>Enigma</h1>
+            <img src="./nhvpslogo.jpeg"></a>
+
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="events.html" class="nav-link">Events</a>
+            <a href="aboutoc.html" class="nav-link">AboutOC</a>
+            <a href="register.html" class="nav-link">Register</a>
+        </div>
+    </nav>
+
+    <div class="space"></div>
+
+    <div class="supwrap">
+        <div class="spl"></div>
+        <div class="cent"><div class="megawrap">
+            <h1>Category A</h1>
+            <div class="wrapper">
+                <div class="event-card">
+                    <img class="event-logo" src="supernova.jpeg" alt="Supernova">
+                    <h2>SUPERNOVA</h2>
+                    <p class="short-desc">Get ready to strut your stuff on the catwalk! NHVPS is thrilled to announce its upcoming fashion .</p>
+                    <p class="full-desc">Get ready to strut your stuff on the catwalk! NHVPS is thrilled to announce its upcoming fashion show SUPERNOVA, where students will have the chance to unleash their creativity and style. In this year's ENIGMA, our annual fest, this fashion spectacle promises to dazzle and inspire.</p>
+                    <a class="read-more">Read more</a>
+                    <a href="./supernova.html" class="learn-more">LEARN MORE <span>&gt;</span></a>
+                </div>
+                <div class="event-card">
+                    <img class="event-logo" src="celestial.jpeg" alt="Celestial Artistry">
+                    <h2>CELESTIAL ARTISTRY</h2>
+                    <p class="short-desc">Step into a world where creativity knows no bounds! Join us for an unforgettable celebration of artistry and innovation at .</p>
+                    <p class="full-desc">Step into a world where creativity knows no bounds! Join us for an unforgettable celebration of artistry and innovation at the Celestial Artistry Event. Whether you're an art aficionado or simply curious about the vibrant world of contemporary art, this event promises to inspire and delight. Join us as we celebrate creativity in its most captivating forms.</p>
+                    <a class="read-more">Read more</a>
+                    <a href="./Celestial.html" class="learn-more">LEARN MORE <span>&gt;</span></a>
+                </div>
+                <div class="event-card">
+                    <img class="event-logo" src="stardust.png" alt="Stardust Serenade">
+                    <h2>STARDUST SERENADE</h2>
+                    <p class="short-desc">Being on stage is living the Disney life we've always imagined. Showcase your special ability on stage and shine bright .</p>
+                    <p class="full-desc">Being on stage is living the Disney life we've always imagined. Showcase your special ability on stage and shine bright. This is your chance to let your talent sparkle and create magical moments that will be remembered long after the curtain falls.</p>
+                    <a class="read-more">Read more</a>
+                    <a href="events/stardust.html" class="learn-more">LEARN MORE <span>&gt;</span></a>
+                </div>
+                <div class="event-card">
+                    <img class="event-logo" src="agree.png" alt="Agree to Disagree">
+                    <h2>AGREE TO DISAGREE</h2>
+                    <p class="short-desc">Let your quills shape the world! Showcase your writing and literary skills in the biggest literary event of the year .</p>
+                    <p class="full-desc">Let your quills shape the world! Showcase your writing and literary skills in the biggest literary event of the year. With a lot of surprises packed in, this event is sure to amaze you! Engage in thought-provoking debates, craft compelling narratives, and explore the power of words.</p>
+                    <a class="read-more">Read more</a>
+                    <a href="events/agree.html" class="learn-more">LEARN MORE <span>&gt;</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="spr"></div>
+    </div>
+    <div class="footer">
+        <h2>Contact us</h2>
+        <p class="mail">oc.enigma2024@gmail.com</p>
+        <p>©2024, Enigma</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('.read-more').forEach(link => {
+            link.addEventListener('click', function() {
+                const card = this.closest('.event-card');
+                const shortDesc = card.querySelector('.short-desc');
+                const fullDesc = card.querySelector('.full-desc');
+                
+                if (shortDesc.style.display !== 'none') {
+                    shortDesc.style.display = 'none';
+                    fullDesc.style.display = 'block';
+                    this.textContent = 'Read less';
+                } else {
+                    shortDesc.style.display = 'block';
+                    fullDesc.style.display = 'none';
+                    this.textContent = 'Read more';
+                }
+            });
+        });
+    </script>
+</body>
+<div id="backbtn"><h1> </h1></div>
+<script src="global.js"></script>
+
+</html>

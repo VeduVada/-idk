@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma School Fest</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        body {
+
+            font-family: "Lulo Clean", Arial, Helvetica, sans-serif;
+            background-color: #fdfdfe;
+            color: #030303;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .split-section {
+            display: flex;
+            height: 400px;
+        }
+
+        .split-section div {
+            /* background-color: white; */
+
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* color: white; */
+        }
+
+        .register-button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .register-button:hover {
+            background-color: darkred;
+        }
+
+        .right-aligned {
+            text-align: right;
+            padding-right: 20px;
+            /* height:100px; */
+        }
+
+        .categories {
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            color: white;
+            background-color: black;
+            padding: 20px;
+        }
+        .categories li{
+            padding-bottom: 6px;
+        }
+
+        .categories h1 {
+            font-size: 3.25em;
+            color: #f70b52;
+        }
+
+        .categories ul {
+            padding-left: 30px;
+        }
+
+
+        .footer {
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            background-color: red;
+        }
+
+        .text-section {
+            color: #f70b52;
+            background-image: url("https://static.wixstatic.com/media/3091a0_155538263da3407aaf7290e26f4da544~mv2.jpg ");
+        }
+
+        .fir h1 {
+            color: #000000;
+        }
+
+        .sec {
+            background-color: #000000;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .gen {
+            padding-left: 2em;
+            background-color: #ffffff;
+            height: 10em;
+            font-size: larger;
+
+        }
+
+        .gen h1 {
+            color: #000000;
+            font-size: 4em;
+        }
+
+        .bar {
+            background-color: #f70b52;
+            /* display: block; */
+            height: 1em;
+            width: 20em;
+        }
+
+
+        /* Container should be full height and full width */
+    </style>
+</head>
+
+<body>
+    <div id="backbtn" onclick="goBack()">
+        <!-- <i class="fa fa-angle-double-left" style="font-size:36px"></i> -->
+         <!-- <h1> < </h1> -->
+    </div>
+    <!-- <div id="mutebtn"></div> -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="./nhvpslogo.jpeg"></a>
+
+            <!-- <h1>Enigma</h1> -->
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="events.html" class="nav-link">Events</a>
+            <a href="aboutoc.html" class="nav-link">AboutOC</a>
+            <a href="register.html" class="nav-link">Register</a>
+        </div>
+    </nav>
+<div class="space"></div>
+    <!-- <div class="carousel">
+        <div class="carousel-item active">
+            <img src="./imgs/banner.jpg" alt="Enigma Fest Image 2" width=100% height="400">
+<video id="trailer" src="engimatrailer.mp4" autoplay style="width: 100vw; z-index: 1;"></video>
+            <iframe src="https://drive.google.com/file/d/1HcaIC0gWbZMczh1aBmH_1TQtqnqrhouD/view?usp=drivesdk?autoplay=1&controls=1" frameborder="0"></iframe>
+<div class="carousel-text">
+            </div>
+        </div>
+    </div> -->
+    <div class="typewriter"style="background-color:black">
+        <div class="typed">
+            <h1 style="color: white;">ENIGMA</h1>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+     <div class="yes">
+        <div id="mutebtn">
+            MUTE
+        </div >
+     </div>
+        <!-- <div class="split-section">
+            <div class="fir">
+                <h1>TRULY <br> EXCITING.</h1>
+            </div>
+            <div class="sec">
+                <p>This is your time to shine</p>
+                <p>This is where you find your true self.</p>
+                <p>This is your Big Break.</p>
+                <h1></h1>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="text-section right-aligned">
+            <h1>TWO FULL DAYS OF PURE ENJOYMENT.</h1>
+        </div> -->
+
+        <div class="gen">
+            <h1>General</h1>
+            <div class="bar"></div>
+            <h1> Guidelines.</h1>
+        </div>
+        <div class="supwrap">
+            <div class="spl" style="background-color: #000000;"></div>
+            <div class="cent">
+                <div class="categories">
+
+                    <div class="ctgs">
+                        <h1>CATEGORIES:</h1>
+                        <ul>
+                            <li>Category A: Classes 1 to 4</li>
+                            <li>Category B: Classes 5 to 8</li>
+                            <li>Category C: Classes 9 to 11</li>
+                        </ul>
+                        <div>
+                            <ul>
+                                <li>Please read all details of events carefully before registering.</li>
+                                <li>For team registrations, each person from the team is required to register.</li>
+                                <li>Name, class, section and house of other teammates MUST be filled out.</li>
+                                <li>Participants will have to be present on both days.</li>
+                                <li>Judge's decisions will be final and binding.</li>
+                                <li>Disobeying any rules and instructions will lead to direct disqualification.</li>
+                                <li>The organizers has the right to censor any entry that is unacceptable.</li>
+                                <li>For any queries, kindly email oc.engima2024@gmail.com .</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dur">
+                        <h1>DURATION:</h1>
+                        <ul>
+                            <li>The duration of the program will be 2 full days.</li>
+                            <li>The timings will be the usual 8:10am to 3:00pm</li>
+                        </ul>
+
+                    </div>
+                    <div class="prize">
+                        <h1>DISTRIBUTION OF HOUSE POINTS</h1>
+                        <ul>
+                            <li>FIRST PLACE:10 house points</li>
+                            <li>SECOND PLACE:7 house points</li>
+                            <li>THIRD PLACE:5 house points</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="spr" style="background-color: #000000;"></div>
+        </div>
+
+
+        <div class="typewriter">
+            <div class="typed">
+                <h2>
+                    Are You ready?
+                </h2>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2>Contact us</h2>
+            <p class="mail">oc.enigma2024@gmail.com</p>
+            <p>©2024, Enigma</p>
+
+        </div>
+    </div>
+
+    <script>
+
+
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
+            lastScrollTop = scrollTop;
+        });
+        const video = document.getElementById('trailer');
+        const muteButton = document.getElementById('mutebtn');
+
+        // Function to toggle mute/unmute
+        function toggleMute() {
+            // alert("clickedme")
+            if (video.muted) {
+                
+                video.muted = false; // Unmute the video
+                muteButton.textContent = 'MUTE'; // Update button text
+            } else {
+                video.muted = true; // Mute the video
+                muteButton.textContent = 'UNMUTE'; // Update button text
+            }
+        }
+
+        // Add event listener to the button
+        muteButton.addEventListener('click', toggleMute);
+    </script>
+    <script src="global.js"></script>
+</body>
+
+</html>
