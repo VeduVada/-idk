@@ -11,12 +11,14 @@
         body {
 
             font-family: "Lulo Clean", Arial, Helvetica, sans-serif;
-            background-color: #fdfdfe;
+            background-color: #020203;
             color: #030303;
             margin: 0;
             padding: 0;
         }
-
+.supwrap{ 
+    margin-bottom: 40px;
+}
 
         .main-wrapper {
             display: flex;
@@ -79,8 +81,12 @@
             padding-left: 30px;
         }
 
-
-        .footer {
+video{
+    padding-top: 100px;
+}
+        .footer { 
+            /* z-index: 2; */
+            display: block;
             height: 200px;
             display: flex;
             flex-direction: column;
@@ -112,9 +118,9 @@
         .gen {
             padding-left: 2em;
             background-color: #ffffff;
-            height: 10em;
+            /* height: 10em; */
             font-size: larger;
-
+/* z-index: 2; */
         }
 
         .gen h1 {
@@ -126,10 +132,46 @@
             background-color: #f70b52;
             /* display: block; */
             height: 1em;
-            width: 20em;
+            /* width: 20em; */
         }
 
+        @media (max-width: 480px) {
+   .gen h1{
+    font-size: 2em;
+   }
+   .cent h1{
+    font-size: 2em;
+   }
+   .cent li{
+    font-size: .9em;
+   }
+        }
+        @media (max-width: 386px){
+            .supwrap{
+                padding-bottom: 70px;
+            }
 
+        }
+        @media (max-width: 344px){
+            .supwrap{
+                padding-bottom: 10px;
+                
+            }
+
+        }
+       
+        @media (max-width: 620px){
+            .supwrap{
+                padding-bottom: 70px;
+            }
+
+        }
+        /* @media (max-width: 296px){
+            .supwrap{
+                padding-bottom: 120px;
+            }
+
+        } */
         /* Container should be full height and full width */
     </style>
 </head>
@@ -142,33 +184,28 @@
     <!-- <div id="mutebtn"></div> -->
     <nav class="navbar" id="navbar">
         <a href="index.html" class="logo">
-            <img src="./nhvpslogo.jpeg"></a>
+            <img src="./imgs/nhvpslogo.jpeg"></a>
 
             <!-- <h1>Enigma</h1> -->
         </a>
         <div class="nav-links">
-            <a href="index.html" class="nav-link">Home</a>
+            <!-- <a href="index.html" class="nav-link">Home</a> -->
             <a href="events.html" class="nav-link">Events</a>
             <a href="aboutoc.html" class="nav-link">AboutOC</a>
             <a href="register.html" class="nav-link">Register</a>
         </div>
     </nav>
 
-    <!-- <div class="carousel">
+    <div class="carousel">
         <div class="carousel-item active">
-            <img src="./banner.jpg" alt="Enigma Fest Image 2" width=100% height="400">
-<video id="trailer" src="engimatrailer.mp4" autoplay style="width: 100vw; z-index: 1;"></video>
+            <!-- <img src="./banner.jpg" alt="Enigma Fest Image 2" width=100% height="400">  -->
+<video id="trailer" src="./imgs/engimatrailer.mp4" autoplay style="width: 100vw; z-index: 1;"></video>
             <div class="carousel-text">
             </div>
         </div>
-    </div> -->
+    </div>
 
-    <div class="main-wrapper">
-     <div class="yes">
-        <button id="mutebtn">
-            MUTE
-        </button>
-     </div>
+    
         <!-- <div class="split-section">
             <div class="fir">
                 <h1>TRULY <br> EXCITING.</h1>
@@ -188,15 +225,23 @@
         <div class="text-section right-aligned">
             <h1>TWO FULL DAYS OF PURE ENJOYMENT.</h1>
         </div> -->
-
+        <div class="main-wrapper">
+            <div class="yes">
+               <div id="mutebtn">
+                   MUTE
+               </div>
+            </div>
+        
         <div class="gen">
             <h1>General</h1>
             <div class="bar"></div>
             <h1> Guidelines.</h1>
         </div>
+       
         <div class="supwrap">
             <div class="spl" style="background-color: #000000;"></div>
             <div class="cent">
+               
                 <div class="categories">
 
                     <div class="ctgs">
@@ -235,22 +280,25 @@
                             <li>THIRD PLACE:5 house points</li>
                         </ul>
                     </div>
+                   
                 </div>
             </div>
             <div class="spr" style="background-color: #000000;"></div>
         </div>
+        
 
-<div class="tyepwriter">
-    <div class="typed">
+<!-- <div class="tyepwrite">
+    <div class="type">
         ARE YOU READY?
     </div>
-</div>
-        <div class="footer">
-            <h2>Contact us</h2>
-            <p class="mail">oc.enigma2024@gmail.com</p>
-            <p>©2024, Enigma</p>
+</div> -->
+       
+    </div>
+    <div class="footer">
+        <h2>Contact us</h2>
+        <p class="mail">oc.enigma2024@gmail.com</p>
+        <p>©2024, Enigma</p>
 
-        </div>
     </div>
 
     <script>

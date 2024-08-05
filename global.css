@@ -25,6 +25,12 @@ body {
     padding: 20px;
     opacity: 0.6;
 }
+@media (max-width:523px) {
+   html .navbar{
+        justify-content: space-evenly;
+    }
+    
+}
 .navbar.hidden {
     transform: translateY(-100%);
 }
@@ -246,7 +252,7 @@ align-items: center;
     height: 50px;
     width: 120px;
     border-radius: 10%;
-    margin-left:90%;
+    /* margin-left:90%; */
 }
 #mutebtn:hover{
     /* content: "MUTE"; */
@@ -312,4 +318,8 @@ align-items: center;
   }
 html .typewriter{
     height: 30%;
+}
+.logo img{
+    width: 84px;
+    height: 60px;
 }
