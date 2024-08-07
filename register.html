@@ -29,6 +29,43 @@
     color: white;
     animation: typing 2s steps(11), blink 0.75s step-end infinite;
 }
+.fl div h1 {
+            color: white;
+            /* font-size: 100px; */
+            /* font-size: 100px; */
+            background-image: linear-gradient(43deg, #4158D0 , #C850C0 , #FFCC70 100%);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200%;
+            animation: gradientAnimation 1s linear infinite;
+        }
+.supwrap{
+    margin-bottom: 176px;
+}
+@media (max-width:717px) {
+    .fl{
+        flex-direction: column;
+    }
+    .ll{
+        flex-direction: column;
+    }
+}
+@media (max-width:413px) {
+    .fl h1{
+        font-size: 1.6em;
+    }
+    
+}
+@media (max-width:328px) {
+    .fl h1{
+        font-size: 1.4em;
+    }
+    .ll a{
+        font-size: .8em;
+    }
+    
+}
+
 
 @keyframes typing {
     from { width: 0; }
@@ -67,7 +104,7 @@
                     <!-- <img src="./imgs/supernova.jpeg" alt=""> -->
                     <div class="typewritr"style="background-color:rgb(42, 41, 41);">
                         <!-- <div class="typed"><h1 style="color: white;">CATEGORY A</h1></div> -->
-                         <H1>CATEGORY A</H1>
+                         <h1>CATEGORY A</h1>
                     </div>
                     <div class="ll">
                         <a href="./CatA.html" class="learn-more">Learn-more</a>
@@ -100,6 +137,9 @@
         </div>
         <div class="spr"></div>
     </div>
+</div>
+</div>
+
 </body>
 <div class="footer" style="z-index: 2;">
     <h2>Contact us</h2>

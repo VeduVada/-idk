@@ -10,7 +10,10 @@
 
 
 /* For large phones */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+    .categories  div h1{
+        font-size: 60px;
+    }
   /* Your styles for large phones */
 }
 
@@ -20,7 +23,8 @@
             color: #ffffff;
             margin: 0;
             padding: 0;
-            background-image: url('./imgs/EVENT\ PAGE\ BG.png');
+            /* background-image: url('https://i.scdn.co/image/ab67616d00001e021e419ad8d3f42c4b51c63ed0'); */
+            background-image: url('./imgs/EVENT\ PAGE\ BG.png');    
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -45,6 +49,17 @@
 :root{
     --pad2:3em;
 }
+.categories div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    border-radius: 20px; 
+    /* opacity: .5; */
+    background-color: rgba(0, 0, 0, 0.5); /* Blue background with 50% opacity */
+    justify-content: center;
+    align-items: center;
+}
+
 .categories div a:hover{
 background-color: #f70b52;
 color: white;
@@ -58,7 +73,15 @@ color: white;
             -webkit-background-clip: text;
             color: transparent;
             background-size: 200%;
-            animation: gradientAnimation 1s linear infinite;
+            animation: gradientAnimation 2s linear infinite;
+        }
+        @keyframe gradientAnimation{
+            0%{
+                background-position:200% 50%
+            }
+            100%{
+                background-position:0% 50%
+            }
         }
         @media (max-width: 320px) { 
     .categories h1{
@@ -70,7 +93,7 @@ color: white;
 /* For phones */
 @media (max-width: 680px) {
     .categories  div h1{
-        font-size: 70px;
+        font-size: 60px;
     }
     .categories div p{
         font-size: 10px;
@@ -82,7 +105,7 @@ color: white;
 }
 @media (max-width: 480px) {
     .categories  div h1{
-        font-size: 50px;
+        font-size: 40px;
     }
     .categories div p{
         font-size: 10px;
@@ -92,7 +115,7 @@ color: white;
     }}
     @media (max-width: 370px) {
     .categories  div h1{
-        font-size: 43px;
+        font-size: 30px;
     }
     .categories div p{
         font-size: 10px;
@@ -100,14 +123,7 @@ color: white;
     .categories div a{
         font-size: 10px;
     }}
-        @keyframe gradientAnimation{
-            0%{
-                background-position:200% 50%
-            }
-            100%{
-                background-position:0% 50%
-            }
-        }
+       
 
         .categories div a {
             display: inline-block;
@@ -148,7 +164,7 @@ color: white;
             <img src="./imgs/nhvpslogo.jpeg"></a>
             <h1>Enigma</h1>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
+                <!-- <a href="index.html" class="nav-link">Home</a> -->
                 <a href="events.html" class="nav-link">Events</a>
                 <a href="aboutoc.html" class="nav-link">AboutOC</a>
                 <a href="register.html" class="nav-link">Register</a>
@@ -158,7 +174,8 @@ color: white;
 
    <div class="supwrap">
     <div class="spl"></div>
-    <div class="cent"> <div class="categories">
+    <div class="cent"> 
+        <div class="categories">
         <div class="A">
             <h1>Category A</h1>
             <p>For Class 1 to 4</p>
@@ -176,7 +193,15 @@ color: white;
         </div>
     </div></div>
 <div class="spr"></div>
+
+
    </div>
+<div class="footer" style="z-index: 2;">
+    <h2>Contact us</h2>
+    <p class="mail">oc.enigma2024@gmail.com</p>
+    <p>©2024, Enigma</p>
+
+</div>
     <script>
         // Navbar scroll behavior
         let lastScrollTop = 0;

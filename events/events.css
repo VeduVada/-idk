@@ -74,7 +74,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: 'Lulo Clean';
-    src: url('../Lulo_Clean_Font_Fontzaa.com/Lulo\ Clean\ W01\ One\ Bold.ttf');
+    src: url('../Lulo\ Clean\ One\ Bold.otf');
 }
 .wrapper img {
     border-radius: 50%; /* Makes images circular */
@@ -294,4 +294,31 @@ font-size: 2em;
         flex-direction: column;
     }
     
+}
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #f70b52;
+    color: #f70b52;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* border-radius: 10px; */
+}
+.learn-more:hover {
+    background-color: #f70b52;
+    color: white;
+}
+.learn-more span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.learn-more:hover span {
+    transform: translateX(5px);
+}
+.footer {
+    color: black;
+    margin-top: 20px;
+    background-color: red;
+    padding: 20px;
+    text-align: center;
 }
