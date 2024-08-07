@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="global.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma School Fest - About OC</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1f1d1e;
+        }
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+        .event-card {
+            display: flex;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-height: 300px;
+            max-height: 400px;
+        }
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(168, 157, 159, 0.2);
+        }
+        .event-images {
+            position: relative;
+            width: 40%;
+            min-width: 200px;
+            overflow: hidden;
+        }
+        .event-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .event-image.active {
+            opacity: 1;
+        }
+        .event-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 60%;
+        }
+        .event-name {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #e94560;
+        }
+        .organizers {
+            margin-bottom: 20px;
+        }
+        .organizer {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .quote-slider {
+            background: transparent;
+            height: 60px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .quote-track {
+            animation: scroll 120s linear infinite;
+            display: flex;
+            width: calc(200% + 20px);
+        }
+        .quote {
+            white-space: nowrap;
+            padding: 10px;
+            font-style: italic;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-90% - 10px))}
+        }
+        .logo img {
+            width: 84px;
+            height: 60px;
+        }
+        .check {
+            border-radius: 50%;
+            height: 110px;
+            width: 110px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="./imgs/nhvpslogo.jpeg" alt="">
+        </a>
+        <h1>Enigma</h1>
+        <div class="nav-links">
+            <!-- <a href="index.html" class="nav-link">Home</a> -->
+            <a href="events.html" class="nav-link">Events</a>
+            <a href="aboutoc.html" class="nav-link">AboutOC</a>
+            <a href="register.html" class="nav-link">Register</a>
+        </div>
+    </nav>
+    <div class="space"></div>
+
+    <div class="container">
+        <h1>About Organizing Committee</h1>
+        <div class="event-grid" id="eventGrid"></div>
+    </div>
+    <div class="check"></div>
+
+    <script>
+        const events = [
+            {
+                name: "Astral Focus",
+                organizers: ["Aryan S Thampi", "Saanvi", "Rachana"],
+                quotes: [
+                    "Capturing the universe, one frame at a time.",
+                    "Through the lens, we see the infinite.",
+                    "Every photograph is a story written in starlight."
+                ],
+                images: ["./imgs/aryan.jpg", "./imgs/saanvi.jpg", "./imgs/rachana.jpg"]
+            },
+            {
+                name: "Cosmic code clash",
+                organizers: ["Vedant S", "Smaran Smitha", "Akarsh Raja"],
+                quotes: [
+                    "Coding is the language of the cosmos.",
+                    "In algorithms, we find the patterns of the universe.",
+                    "Every bug fixed is a star aligned."
+                ],
+                images: ["./imgs/vedant.jpg", "./imgs/smaran.jpg", "./imgs/akarsh.jpg"]
+            },
+            {
+                name: "Supernova",
+                organizers: ["Mahek", "Maanya", "Esha"],
+                quotes: [
+                    "Fashion that's out of this world.",
+                    "Dressing the stars, one design at a time.",
+                    "Where style meets the cosmos."
+                ],
+                images: ["./imgs/mahek.jpg", "./imgs/maanya.jpg", "./imgs/esha.jpg"]
+            },
+            {
+                name: "Celestial Artistry",
+                organizers: ["Mydhilli", "Vanshika", "Shreya"],
+                quotes: [
+                    "Art is the universe expressing itself.",
+                    "Every stroke paints a new galaxy.",
+                    "Creativity knows no celestial bounds."
+                ],
+                images: ["./imgs/mydhili.jpg", "./imgs/vanshika.jpg", "./imgs/shreya.jpg"]
+            },
+            {
+                name: "De Jure",
+                organizers: ["Sudiksha", "Sanghames"],
+                quotes: [
+                    "Justice shines like the brightest star.",
+                    "Upholding the laws of the universe."
+                ],
+                images: ["./imgs/sangu2.jpg","./imgs/sudiksha.jpg"]
+            },
+            {
+                name: "Stellar Ventures",
+                organizers: ["Himesh S Raju", "Dixit", "Vishal Lunawat"],
+                quotes: [
+                    "Where interstellar deals are made.",
+                    "Commerce at the speed of light.",
+                    "Navigating the economic cosmos."
+                ],
+                images: ["./imgs/himesh.jpg","./imgs/vishal.jpg"]
+            },
+            {
+                name: "Stardust Serenade",
+                organizers: ["Siddaratha", "Sanath", "Aditi", "Dhruti", "Triya", "Krisha"],
+                quotes: [
+                    "Talents that shine brighter than stars.",
+                    "Performing across the cosmos.",
+                    "Where every act is out of this world.",
+                    "'I like aryan' - Siddhartha",
+                    "'I hold my shit during Violin concerts' - Sanath",
+                    "Where every act is out of this world."
+                ],
+                images: ["./imgs/sanath.jpg", "./imgs/sid.jpg", "./imgs/dhruti.jpg","./imgs/triya.jpg","./imgs/aditi.jpg","./imgs/krisha.jpg"]
+            },
+            {
+                name: "Agree to Disagree",
+                organizers: ["Shradha", "Abhed"],
+                quotes: [
+                    "Where interstellar deals are made.",
+                    "Commerce at the speed of light.",
+                    "Navigating the economic cosmos."
+                ],
+                images: ["./imgs/shradha.jpg", "./imgs/abhed.jpg"]
+            },
+            {
+                name: "Calypso Crisis Management",
+                organizers: ["Adith", "Nikhil", "Ashwin"],
+                quotes: [
+                    "'I like to eat chawanprash every night before bed'- Ashwin",
+                    "'Old Monk is the only guru i listen to' - Adith",
+                    "'Mosranna is my favourite '- Nikhil"
+                ],
+                images: ["./imgs/adith.jpg", "./imgs/ashwin.jpg", "./imgs/nikhil.jpg"]
+            },
+            {
+                name: "Luminous literature",
+                organizers: ["Samhita"],
+                quotes: [
+                    "sum literature quote",
+                    
+                ],
+                images: ["./imgs/samhita.jpg"]
+            },
+            {
+                name: "Organizers & HR",
+                organizers: ["Jhanavi","Saatvik","Rhea","Sanjna","Mayank","Lakshitha"],
+                quotes: [
+                    "'I like kids-'Mayank",
+                    
+                ],
+                images: ["./imgs/jhanavi.jpg","./imgs/rhea.jpg","./imgs/mayank.jpg","./imgs/lakshita.jpg"]
+            }
+        ];
+
+        function createEventCard(event) {
+            const card = document.createElement('div');
+            card.className = 'event-card';
+
+            const imagesContainer = document.createElement('div');
+            imagesContainer.className = 'event-images';
+
+            event.images.forEach((img, index) => {
+                const imgElement = document.createElement('img');
+                imgElement.src = img;
+                imgElement.alt = event.name;
+                imgElement.className = `event-image ${index === 0 ? 'active' : ''}`;
+                imagesContainer.appendChild(imgElement);
+            });
+
+            const info = document.createElement('div');
+            info.className = 'event-info';
+
+            const name = document.createElement('h2');
+            name.className = 'event-name';
+            name.textContent = event.name;
+
+            const organizers = document.createElement('div');
+            organizers.className = 'organizers';
+            event.organizers.forEach(org => {
+                const organizer = document.createElement('div');
+                organizer.className = 'organizer';
+                organizer.textContent = org;
+                organizers.appendChild(organizer);
+            });
+
+            const quoteSlider = document.createElement('div');
+            quoteSlider.className = 'quote-slider';
+            
+            const quoteTrack = document.createElement('div');
+            quoteTrack.className = 'quote-track';
+
+            // Double the quotes to create a seamless loop
+            const doubledQuotes = [...event.quotes, ...event.quotes];
+            doubledQuotes.forEach(quote => {
+                const quoteElement = document.createElement('div');
+                quoteElement.className = 'quote';
+                quoteElement.textContent = `"${quote}"`;
+                quoteTrack.appendChild(quoteElement);
+            });
+
+            quoteSlider.appendChild(quoteTrack);
+
+            info.appendChild(name);
+            info.appendChild(organizers);
+            info.appendChild(quoteSlider);
+
+            card.appendChild(imagesContainer);
+            card.appendChild(info);
+
+            return card;
+        }
+
+        function rotateImages(card) {
+            const images = card.querySelectorAll('.event-image');
+            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        const eventGrid = document.getElementById('eventGrid');
+
+        events.forEach(event => {
+            const card = createEventCard(event);
+            eventGrid.appendChild(card);
+
+            setInterval(() => rotateImages(card), 4000);
+        });
+
+        // Navbar scroll behavior
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+    <div id="backbtn"></div>
+    <script src="global.js"></script>
+</body>
+</html>
