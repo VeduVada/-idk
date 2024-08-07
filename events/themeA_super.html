@@ -56,7 +56,14 @@ color: rgb(250, 246, 246);
             <a href="../register.html" class="nav-link">Register</a>
         </div>
     </nav>
-    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html">Home</a>
+        <a href="../aboutoc.html">AboutOC</a>
+        <a href="../events.html">Events</a>
+        <a href="../register.html">Register</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="./imgs/nhvpslogo.jpeg" alt=""></span>
     <div class="main-wrapper">
             <ul>
                 <li><h1>ROUND 1:</h1>
@@ -75,12 +82,14 @@ color: rgb(250, 246, 246);
                 </li>
             </ul>
     </div>
-    <div class="footer">
+    <footer class="footer" style="z-index: 2;">
         <h2>Contact us</h2>
         <p class="mail">oc.enigma2024@gmail.com</p>
         <p>©2024, Enigma</p>
-    </div>
+    
+    </footer>
 </body>
 
+<script src="../global.js"></script>
 
 </html>

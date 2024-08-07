@@ -128,6 +128,7 @@ color: white;
         .categories div a {
             display: inline-block;
             margin-top: 10px;
+            margin-bottom: 10px;
     padding: 7px 14px;
     font-size: 16px;
     /* font-family: Arial, sans-serif; */
@@ -140,10 +141,11 @@ color: white;
         }
 
         .categories div p {
-            color: white;
+            font-weight: 600;
+            color: rgba(194, 194, 194, 0.65);
             /* color: #000000; */
 
-            left:var(--pad2);
+            /* left:var(--pad2); */
         }
         @media (max-width:523px) {
    html .navbar{
@@ -170,7 +172,14 @@ color: white;
                 <a href="register.html" class="nav-link">Register</a>
             </div>
     </nav>
-
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html">Home</a>
+        <a href="./aboutoc.html">AboutOC</a>
+        <a href="./events.html">Events</a>
+        <a href="./register.html">Register</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="./imgs/nhvpslogo.jpeg" alt=""></span>
 
    <div class="supwrap">
     <div class="spl"></div>
@@ -196,14 +205,14 @@ color: white;
 
 
    </div>
-<div class="footer" style="z-index: 2;">
+   <footer class="footer" style="z-index: 2;">
     <h2>Contact us</h2>
     <p class="mail">oc.enigma2024@gmail.com</p>
     <p>©2024, Enigma</p>
 
-</div>
-    <script>
-        // Navbar scroll behavior
+</footer>
+    <!-- <script>
+        
         let lastScrollTop = 0;
         const navbar = document.getElementById('navbar');
 
@@ -216,7 +225,7 @@ color: white;
             }
             lastScrollTop = scrollTop;
         });
-    </script>
+    </script> -->
 </body>
 <script src="global.js"></script>
 

@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enigma School Fest - About OC</title>
     <style>
+        .event-card:hover{
+    /* border-radius: 20px; */
+    transition: all 0.35s ease;
+    background-color: #ffffff;
+    transform: scale(1.05) ;
+
+}
         .container {
             max-width: 1200px;
             margin: 80px auto 0;
@@ -94,6 +101,12 @@
             padding: 10px;
             font-style: italic;
         }
+        @media (max-width:473px) {
+            .quote-slider{
+                margin-left: 20px;
+            }
+            
+        }
         @keyframes scroll {
             0% { transform: translateX(0); }
             
@@ -123,6 +136,14 @@
             <a href="register.html" class="nav-link">Register</a>
         </div>
     </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html">Home</a>
+        <a href="./aboutoc.html">AboutOC</a>
+        <a href="./events.html">Events</a>
+        <a href="./register.html">Register</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="./imgs/nhvpslogo.jpeg" alt=""></span>
     <div class="space"></div>
 
     <div class="container">
