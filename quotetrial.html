@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Slider</title>
+    <style>
+        .quote-slider {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .quote-track {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .quote {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-slider">
+        <div class="quote-track">
+            <div class="quote">This is a short quote.</div>
+            <div class="quote">Here is a much longer quote that will require more time to display.</div>
+            <div class="quote">Another example quote.</div>
+        </div>
+    </div>
+    <!-- Add more quote sliders as needed -->
+    <script src="quoteslider.js">
+        document.addEventListener('DOMContentLoaded', () => {
+    const characterDuration = 0.85; // seconds per character
+
+    function updateQuoteSliders() {
+        const sliders = document.querySelectorAll('.quote-slider');
+        
+        sliders.forEach(slider => {
+            const track = slider.querySelector('.quote-track');
+            const quotes = Array.from(track.children);
+            
+            let intervals = [];
+
+            // Calculate intervals for each quote
+            quotes.forEach(quote => {
+                const quoteLength = quote.textContent.length;
+                const interval = quoteLength * characterDuration * 1000; // in milliseconds
+                intervals.push(interval);
+            });
+
+            // Function to set the slider interval
+            function setSliderInterval() {
+                let currentIndex = 0;
+                
+                function slide() {
+                    // Calculate the interval based on the current quote
+                    const interval = intervals[currentIndex];
+                    
+                    // Apply the transition duration
+                    track.style.transitionDuration = `${interval / 1000}s`;
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                    currentIndex = (currentIndex + 1) % quotes.length;
+
+                    setTimeout(slide, interval);
+                }
+
+                slide();
+            }
+
+            setSliderInterval();
+        });
+    }
+
+    updateQuoteSliders();
+});
+
+    </script>
+</body>
+</html>

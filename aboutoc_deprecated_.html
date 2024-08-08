@@ -333,4 +333,57 @@
     <div id="backbtn"></div>
     <script src="global.js"></script>
 </body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Active Class</title>
+    <style>
+        .container div {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .active {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="active">Div 1</div>
+        <div>Div 2</div>
+        <div>Div 3</div>
+        <div>Div 4</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const interval = 4000; // 4 seconds
+            const container = document.querySelector('.container');
+            const divs = Array.from(container.children);
+            let currentIndex = 0;
+
+            function moveActiveClass() {
+                // Remove 'active' class from the current div
+                divs[currentIndex].classList.remove('active');
+
+                // Determine the next index
+                currentIndex = (currentIndex + 1) % divs.length;
+
+                // Add 'active' class to the next div
+                divs[currentIndex].classList.add('active');
+            }
+
+            // Initial call to set the first active class
+            moveActiveClass();
+
+            // Set interval to move the active class every 4 seconds
+            setInterval(moveActiveClass, interval);
+        });
+    </script>
+</body>
 </html>

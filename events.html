@@ -55,7 +55,7 @@
     padding-left: 20px;
     border-radius: 20px; 
     /* opacity: .5; */
-    background-color: rgba(0, 0, 0, 0.5); /* Blue background with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.301); /* Blue background with 50% opacity */
     justify-content: center;
     align-items: center;
 }
@@ -65,7 +65,7 @@ background-color: #f70b52;
 color: white;
 }
 
-        .categories div h1 {
+        .categories div h1 { padding-right: 10px;
             color: white;
             font-size: 100px;
             /* font-size: 100px; */
@@ -101,19 +101,12 @@ color: white;
     .categories div a{
         font-size: 10px;
     }
+    .navbar{
+        justify-content: space-evenly;
+    }
   /* Your styles for phones */
 }
 @media (max-width: 480px) {
-    .categories  div h1{
-        font-size: 40px;
-    }
-    .categories div p{
-        font-size: 10px;
-    }
-    .categories div a{
-        font-size: 10px;
-    }}
-    @media (max-width: 370px) {
     .categories  div h1{
         font-size: 30px;
     }
@@ -123,8 +116,32 @@ color: white;
     .categories div a{
         font-size: 10px;
     }}
+    @media (max-width: 380px) {
+    .categories  div h1{
+        font-size: 1.4em;
+    }
+    .categories div p{
+        font-size: 10px;
+    }
+    .categories div a{
+        font-size: 10px;
+    }}
        
-
+    @media (max-width:413px) {
+     h1{
+        font-size: 1.6em;
+    }
+    
+}
+@media (max-width:303px) {
+    .categories div h1{
+        font-size: 1.3em;
+    }
+     a{
+        font-size: .8em;
+    }
+    
+}
         .categories div a {
             display: inline-block;
             margin-top: 10px;
@@ -149,7 +166,7 @@ color: white;
         }
         @media (max-width:523px) {
    html .navbar{
-        justify-content: space-evenly;
+        /* justify-content: center;      */
     }
     
 }
@@ -164,7 +181,7 @@ color: white;
     <nav class="navbar" id="navbar">
         <a href="index.html" class="logo">
             <img src="./imgs/nhvpslogo.jpeg"></a>
-            <h1>Enigma</h1>
+            <!-- <h1>Enigma</h1> -->
             <div class="nav-links">
                 <!-- <a href="index.html" class="nav-link">Home</a> -->
                 <a href="events.html" class="nav-link">Events</a>

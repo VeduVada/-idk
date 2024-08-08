@@ -110,7 +110,7 @@
         @keyframes scroll {
             0% { transform: translateX(0); }
             
-            100% { transform: translateX(calc(-350% - 10px))}
+            100% { transform: translateX(calc(-400% - 10px))}
         }
         .logo img {
             width: 84px;
@@ -129,7 +129,7 @@
         <a href="index.html" class="logo">
             <img src="./imgs/nhvpslogo.jpeg" alt="">
         </a>
-        <h1>Enigma</h1>
+        <!-- <h1>Enigma</h1> -->
         <div class="nav-links">
             <a href="events.html" class="nav-link">Events</a>
             <a href="aboutoc.html" class="nav-link">AboutOC</a>
@@ -264,6 +264,7 @@
                 <div class="event-images">
                     <img src="./imgs/himesh.jpg" alt="Stellar Ventures" class="event-image active">
                     <img src="./imgs/vishal.jpg" alt="Stellar Ventures" class="event-image">
+                    <img src="./imgs/dixit.jpeg" alt="">
                 </div>
                 <div class="event-info">
                     <h2 class="event-name">Stellar Ventures</h2>
@@ -305,8 +306,8 @@
                             <div class="quote">"Talents that shine brighter than stars."</div>
                             <div class="quote">"Performing across the cosmos."</div>
                             <div class="quote">"Where every act is out of this world."</div>
-                            <div class="quote">"'Everyone wants to know, what would I do if I didn't win… I guess we'll never know' - Siddhartha"</div>
-                            <div class="quote">"'I hold my shit during Violin concerts' - Sanath"</div>
+                            <div class="quote">'Everyone wants to know, what would I do if I didn't win… I guess we'll never know' - Siddhartha</div>
+                            <div class="quote">'I hold my shit during Violin concerts' - Sanath</div>
                             <div class="quote">"Where every act is out of this world."</div>
                         </div>
                     </div>
@@ -347,9 +348,9 @@
                     </div>
                     <div class="quote-slider">
                         <div class="quote-track">
-                            <div class="quote">"'I like to eat chawanprash every night before bed' - Ashwin"</div>
-                            <div class="quote">"'Old Monk is the only guru I listen to' - Adith"</div>
-                            <div class="quote">"'Mosranna is my favorite' - Nikhil"</div>
+                            <div class="quote">'I like to eat chawanprash every night before bed' - Ashwin</div>
+                            <div class="quote">'Old Monk is the only guru I listen to' - Adith</div>
+                            <div class="quote">'Mosranna is my favorite' - Nikhil"</div>
                         </div>
                     </div>
                 </div>
@@ -365,6 +366,9 @@
                     </div>
                     <div class="quote-slider">
                         <div class="quote-track">
+                            <div class="quote">"sum literature quote"</div>
+                            <div class="quote">"sum literature quote"</div>
+                            <div class="quote">"sum literature quote"</div>
                             <div class="quote">"sum literature quote"</div>
                         </div>
                     </div>
@@ -389,7 +393,9 @@
                     </div>
                     <div class="quote-slider">
                         <div class="quote-track">
-                            <div class="quote">"'I like kids' - Mayank"</div>
+                            <div class="quote">'I like kids' - Mayank</div>
+                            <div class="quote">"</div>
+
                         </div>
                     </div>
                 </div>
@@ -403,18 +409,75 @@
 
     <div id="backbtn"></div>
     <script>
-        let lastScrollTop = 0;
-        const navbar = document.getElementById('navbar');
-    
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                navbar.classList.add('hidden');
-            } else {
-                navbar.classList.remove('hidden');
+     
+        document.addEventListener('DOMContentLoaded', () => {
+            const interval = 4000; // 4 seconds
+
+            function moveActiveClass(container) {
+                const divs = Array.from(container.children);
+                let currentIndex = divs.findIndex(div => div.classList.contains('active'));
+
+                if (currentIndex === -1) return; // No active class found
+
+                // Remove 'active' class from the current div
+                divs[currentIndex].classList.remove('active');
+
+                // Determine the next index
+                currentIndex = (currentIndex + 1) % divs.length;
+
+                // Add 'active' class to the next div
+                divs[currentIndex].classList.add('active');
             }
-            lastScrollTop = scrollTop;
+
+            // Get all containers
+            const containers = document.querySelectorAll('.event-images');
+
+            // Set an interval to move the active class for each container every 4 seconds
+            setInterval(() => {
+                containers.forEach(container => moveActiveClass(container));
+            }, interval);
         });
+        document.addEventListener('DOMContentLoaded', () => {
+    const characterDuration = 0.85; // seconds per character
+
+    function updateQuoteSliders() {
+        const sliders = document.querySelectorAll('.quote-slider');
+        
+        sliders.forEach(slider => {
+            const track = slider.querySelector('.quote-track');
+            const quotes = Array.from(track.children);
+            
+            // Function to calculate the interval for each quote
+            function calculateInterval(quote) {
+                const quoteLength = quote.textContent.length;
+                return quoteLength * characterDuration * 1000; // convert to milliseconds
+            }
+
+            // Function to set the slider interval
+            // function setSliderInterval() {
+            //     let currentIndex = 0;
+
+            //     function slide() {
+            //         const interval = calculateInterval(quotes[currentIndex]);
+            //         track.style.transitionDuration = `${interval / 1000}s`;
+            //         track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            //         currentIndex = (currentIndex + 1) % quotes.length;
+
+            //         setTimeout(slide, interval);
+            //     }
+
+            //     slide();
+            // }
+
+            setSliderInterval();
+        });
+    }
+
+    updateQuoteSliders();
+});
+
+
     </script>
     <script src="global.js"></script>
 </body>

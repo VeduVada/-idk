@@ -65,7 +65,7 @@ function openNav() {
         if (!document.querySelector(`#${elementId}`)) {
             const newElement = document.createElement('span');
             newElement.id = elementId;
-            newElement.textContent = 'This is the re-added element.';
+            newElement.textContent = '';
             document.body.appendChild(newElement); // Append to the body or appropriate container
         }
     }
@@ -86,7 +86,7 @@ function handleResize() {
         if (!document.querySelector(`#${elementId}`)) {
             const newElement = document.createElement('span');
             newElement.id = elementId;
-            newElement.textContent = 'This is the re-added element.';
+            newElement.textContent = '';
             document.body.appendChild(newElement); // Append to the body or appropriate container
         }
     }
