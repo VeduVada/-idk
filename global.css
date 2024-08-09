@@ -4,6 +4,10 @@ body {
     color: #030303;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .navbar a .logo{
     width: 84px;
@@ -469,9 +473,39 @@ th{
     
     span {
         transform: translateX(0); /* Show the mobile menu button */
+        height: fit-content;
+        width: fit-content;
+    }
+    .sidenav{
+        z-index: 2;
     }
 }
 
+@media (max-width:420px) {
+    .container h1{
+        /* right: 100px; */
+        font-size: 1.0em;
+    }
+    .container{
+        min-width: 280px;
+        padding: 0 0 0 0 ;
+    }
+  .event-card{
+    width: 350px;
+  }
+  .event-images{
+    width: 150px;
+  }
+.event-grid .event-card h2{
+font-size: 1.3em;
+}
+.event-card div{
+font-size: .95em;
+}
+.cent li{
+font-size: .8em;
+}
+}
 @media (min-width: 524px) {
     span {
         display: none; /* Hide the mobile menu button on larger screens */

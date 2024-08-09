@@ -77,8 +77,9 @@ window.addEventListener('resize', handleResize);
 handleResize();
 
 function handleResize() {
-    const element = document.querySelector(".sidebar")
+    const element = document.querySelector(".sidebar");
     const elementId = 'my-Sidenav'; // Use a unique ID for the element
+
     if (window.innerWidth <= 600) {
         if (element) element.remove();
     } else {
@@ -87,10 +88,22 @@ function handleResize() {
             const newElement = document.createElement('span');
             newElement.id = elementId;
             newElement.textContent = '';
-            document.body.appendChild(newElement); // Append to the body or appropriate container
+            
+            // Insert as the first child of the body
+            const body = document.body;
+            if (body.firstChild) {
+                body.insertBefore(newElement, body.firstChild);
+            } else {
+                body.appendChild(newElement);
+            }
         }
     }
 }
+
+// Call the function initially and also on window resize
+window.addEventListener('resize', handleResize);
+handleResize();
+
 
 // Attach the resize handler
 window.addEventListener('resize', handleResize);
