@@ -141,6 +141,70 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
+// device-detection.js
+function getDeviceInfo() {
+const userAgent = navigator.userAgent;
+
+if (/iPhone|iPad|iPod/i.test(userAgent)) {
+return 'iOS device';
+} else if (/Android/i.test(userAgent)) {
+return 'Android device';
+} else if (/Windows/i.test(userAgent)) {
+return 'Windows device';
+} else {
+return 'Other device';
+}
+}
+
+// Update the webpage with device information
+document.addEventListener('DOMContentLoaded', () => {
+const deviceInfo = getDeviceInfo();
+document.getElementById('device-info').textContent = deviceInfo;
+});
+// global.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (isIOS()) {
+        removeSpecificCSSRules();
+    }
+});
+
+function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function removeSpecificCSSRules() {
+    const styleSheets = document.styleSheets;
+
+    // Iterate through all stylesheets
+    for (let sheet of styleSheets) {
+        try {
+            // Iterate through all rules in the stylesheet
+            for (let i = sheet.cssRules.length - 1; i >= 0; i--) {
+                const rule = sheet.cssRules[i];
+                
+                // Check if the rule is a media query and matches the criteria
+                if (rule.media) {
+                    for (let j = 0; j < rule.media.length; j++) {
+                        const mediaQuery = rule.media[j];
+                        if (mediaQuery === '(max-width: 386px)' ||
+                            mediaQuery === '(max-width: 344px)' ||
+                            mediaQuery === '(max-width: 620px)') {
+                            sheet.deleteRule(i); // Remove the rule
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            console.error('Error accessing stylesheet:', e);
+        }
+    }
+}
+// global.js
+
+
+
+
 // Navbar behaviour--
 // let lastScrollTop = 0;
 // const navbar = document.getElementById('navbar');
