@@ -178,15 +178,16 @@ function isIOS() {
 }}
 
 function removeSpecificCSSRules() {
-    const styleSheets = document.styleSheets;
+    // Find the <style> tag with the specific content
+    const styleTags = document.querySelectorAll('head style');
 
-    // Iterate through all stylesheets
-    for (let sheet of styleSheets) {
-        try {
-            // Iterate through all rules in the stylesheet
+    styleTags.forEach(styleTag => {
+        const sheet = styleTag.sheet;
+        if (sheet) {
+            // Loop through all CSS rules in the <style> tag
             for (let i = sheet.cssRules.length - 1; i >= 0; i--) {
                 const rule = sheet.cssRules[i];
-                
+
                 // Check if the rule is a media query and matches the criteria
                 if (rule.media) {
                     for (let j = 0; j < rule.media.length; j++) {
@@ -194,15 +195,14 @@ function removeSpecificCSSRules() {
                         if (mediaQuery === '(max-width: 386px)' ||
                             mediaQuery === '(max-width: 344px)' ||
                             mediaQuery === '(max-width: 620px)') {
+                            alert("deleted"+i);
                             sheet.deleteRule(i); // Remove the rule
                         }
                     }
                 }
             }
-        } catch (e) {
-            console.error('Error accessing stylesheet:', e);
         }
-    }
+    });
 }
 // global.js
 
