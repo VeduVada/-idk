@@ -172,9 +172,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function isIOS() {
     const userAgent = navigator.userAgent;
     if (/iPhone|iPad|iPod/i.test(userAgent)) {
+        alert("ios he bhai")
     return true;
+    
     // return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-}
+}}
 
 function removeSpecificCSSRules() {
     const styleSheets = document.styleSheets;
