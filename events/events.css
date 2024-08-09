@@ -91,6 +91,11 @@ body {
        }
  
  }
+ @media (min-width: 524px) {
+    span {
+        display: none; /* Hide the mobile menu button on larger screens */
+    }
+}
  span{
  
      transform: translateX(-1000%);
