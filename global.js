@@ -170,7 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function isIOS() {
-    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const userAgent = navigator.userAgent;
+    if (/iPhone|iPad|iPod/i.test(userAgent)) {
+    return true;
+    // return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 }
 
 function removeSpecificCSSRules() {
@@ -216,4 +219,3 @@ function removeSpecificCSSRules() {
 //         navbar.classList.remove('hidden');
 //     }
 //     lastScrollTop = scrollTop;
-// });
