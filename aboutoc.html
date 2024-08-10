@@ -14,21 +14,36 @@
 
 }
         .container {
+            
             max-width: 1200px;
             margin: 80px auto 0;
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            /* padding: 20px; */
+            /* padding-right: 20px; */
+            /* padding-left: 20px;
+            margin-right: 20px; */
         }
-        h1 {
-            margin-bottom: 20px;
+    
+        h1 { 
+            right: 50px;
+            white-space: normal; /* Ensures text wraps */
+            overflow-wrap: break-word; /* Modern syntax */
+            word-wrap: break-word; /* Older syntax */
+            margin-bottom: 5px;
             text-align: center;
             color: #252324;
+        }
+        .f{
+            margin-bottom: 20px;
         }
         .event-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 30px;
         }
-        .event-card {
+        .event-card { 
+            /* max-width: 90vh; */
             /* min-width: 150px; */
             display: flex;
             background-color: #f4f4f4;
@@ -103,6 +118,9 @@
             font-style: italic;
         }
         @media (max-width:473px) {
+            .space{
+                display: none;
+            }
             .quote-slider{
                 margin-left: 20px;
             }
@@ -122,6 +140,36 @@
             height: 110px;
             width: 110px;
             background-color: black;
+        }
+        @media (max-width:405px) {
+            h1{
+                font-size: 1.2em;
+            }
+            
+        }
+        @media (max-width:330px) {
+            .container{
+                
+                padding: 0%;
+                margin: 0;
+            }
+            .event-card{
+                width: 300px;
+                margin-left: 5px;
+                /* padding-left: 5px; */
+                padding-right: 5px;
+            }
+            h1{
+                font-size: 1.0em;
+            }
+            .event-card .event-info h2{
+                font-size: 0.9em;
+            }
+            .organizers{
+                font-size: 0.9em;
+
+            }
+            
         }
     </style>
 </head>
@@ -145,10 +193,12 @@
         <a href="./register.html">Register</a>
       </div>
       <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="./imgs/nhvpslogo.jpeg" alt=""></span>
-    <div class="space"></div>
+    <!-- <div class="space"></div> -->
 
     <div class="container">
-        <h1>About Organizing Committee</h1>
+        <h1>About</h1>
+        <h1>Organizing </h1>
+        <h1 class="f">Committee</h1>
         <div class="event-grid" id="eventGrid">
             <!-- Event cards will be inserted here -->
             <div class="event-card">
