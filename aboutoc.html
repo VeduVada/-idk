@@ -43,8 +43,7 @@
             gap: 30px;
         }
         .event-card { 
-            /* max-width: 90vh; */
-            /* min-width: 150px; */
+           
             display: flex;
             background-color: #f4f4f4;
             border-radius: 10px;
@@ -59,7 +58,7 @@
         }
         .event-images {
             position: relative;
-            width: 40%;
+            width: 38%;
             min-width: 130px;
             overflow: hidden;
         }
@@ -82,7 +81,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 60%;
+            /* width: 60%; */
         }
         .event-name {
             font-size: 1.5em;
@@ -98,25 +97,39 @@
             margin-bottom: 5px;
         }
         .quote-slider {
-            background: transparent;
-            height: 60px;
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-        }
-        .quote-track {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight:600;
-            animation: scroll 120s linear infinite;
-            display: flex;
-            width: calc(200% + 20px);
-        }
-        .quote {
-            white-space: nowrap;
-            padding: 10px;
-            font-style: italic;
-        }
+    background: transparent;
+    height: 60px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.quote-track {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: scroll 100s linear infinite;
+}
+
+.quote {
+    padding: 10px;
+    font-style: italic;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+        
         @media (max-width:473px) {
             .space{
                 display: none;
@@ -126,11 +139,7 @@
             }
             
         }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            
-            100% { transform: translateX(calc(-400% - 10px))}
-        }
+       
         .logo img {
             width: 84px;
             height: 60px;
@@ -149,12 +158,12 @@
         }
         @media (max-width:330px) {
             .container{
-                
+        
                 padding: 0%;
                 margin: 0;
             }
             .event-card{
-                min-width: 300px;
+                min-width: 280px;
                 margin-left: 5px;
                 /* padding-left: 5px; */
                 padding-right: 5px;
@@ -233,7 +242,9 @@
                     <img src="./imgs/akarsh.jpg" alt="Cosmic Code Clash" class="event-image">
                 </div>
                 <div class="event-info">
-                    <h2 class="event-name">Cosmic Code Clash</h2>
+                    <h2 class="event-name">Cosmic Code </h2>
+                    <h2 class="event-name">Clash</h2>
+
                     <div class="organizers">
                         <div class="organizer">Vedant S</div>
                         <div class="organizer">Smaran Smitha</div>
@@ -277,7 +288,9 @@
                     <img src="./imgs/shreya.jpg" alt="Celestial Artistry" class="event-image">
                 </div>
                 <div class="event-info">
-                    <h2 class="event-name">Celestial Artistry</h2>
+                    <h2 class="event-name">Celestial </h2>
+                    <h2 class="event-name"> Artistry</h2>
+
                     <div class="organizers">
                         <div class="organizer">Mydhilli</div>
                         <div class="organizer">Vanshika</div>
@@ -320,7 +333,9 @@
                     <img src="./imgs/dixit.jpeg" alt="">
                 </div>
                 <div class="event-info">
-                    <h2 class="event-name">Stellar Ventures</h2>
+                    <h2 class="event-name">Stellar</h2>
+                    <h2 class="event-name">Ventures</h2>
+
                     <div class="organizers">
                         <div class="organizer">Himesh S Raju</div>
                         <div class="organizer">Dixit</div>
@@ -348,7 +363,9 @@
                     <img src="./imgs/krisha.jpg" alt="Stardust Serenade" class="event-image">
                 </div>
                 <div class="event-info">
-                    <h2 class="event-name">Stardust Serenade</h2>
+                    <h2 class="event-name">Stardust</h2>
+                    <h2 class="event-name">Serenade</h2>
+
                     <div class="organizers">
                         <div class="organizer">Siddaratha</div>
                         <div class="organizer">Sanath</div>
@@ -376,7 +393,9 @@
                     <img src="./imgs/abhed.jpg" alt="Agree to Disagree" class="event-image">
                 </div>
                 <div class="event-info">
-                    <h2 class="event-name">Agree to Disagree</h2>
+                    <h2 class="event-name">Agree to</h2>
+                    <h2 class="event-name">Disagree</h2>
+
                     <div class="organizers">
                         <div class="organizer">Shradha</div>
                         <div class="organizer">Abhed</div>
@@ -397,7 +416,9 @@
                     <img src="./imgs/nikhil.jpg" alt="Calypso Crisis Management" class="event-image">
                 </div>
                 <div class="event-info">
-                    <h2 class="event-name">Calypso Crisis Management</h2>
+                    <h2 class="event-name">Calypso Crisis</h2>
+                    <h2 class="event-name">Management</h2>
+
                     <div class="organizers">
                         <div class="organizer">Adith</div>
                         <div class="organizer">Nikhil</div>
@@ -423,7 +444,9 @@
                     <img src="./imgs/samhita.jpg" alt="Luminous Literature" class="event-image active">
                 </div>
                 <div class="event-info">
-                    <h2 class="event-name">Luminous Literature</h2>
+                    <h2 class="event-name">Luminous </h2>
+                    <h2 class="event-name">Literature</h2>
+
                     <div class="organizers">
                         <div class="organizer">Samhita</div>
                     </div>
@@ -448,7 +471,9 @@
                     <img src="./imgs/lakshita.jpg" alt="Organizers & HR" class="event-image">
                 </div>
                 <div class="event-info">
-                    <h2 class="event-name">Organizers & HR</h2>
+                    <h2 class="event-name">Organizers </h2>
+                    <h2 class="event-name"> & HR</h2>
+
                     <div class="organizers">
                         <div class="organizer">Jhanavi</div>
                         <div class="organizer">Saatvik</div>
@@ -477,7 +502,7 @@
             <!-- Repeat the above event-card structure for each event, changing the content accordingly -->
         </div>
     </div>
-    <div class="check"></div>
+    <!-- <div class="check"></div> -->
 
     <div id="backbtn"></div>
     <script>
@@ -510,43 +535,26 @@
             }, interval);
         });
         document.addEventListener('DOMContentLoaded', () => {
-    const characterDuration = 0.85; // seconds per character
-
-    function updateQuoteSliders() {
-        const sliders = document.querySelectorAll('.quote-slider');
+    const sliders = document.querySelectorAll('.quote-slider');
+    
+    sliders.forEach(slider => {
+        const track = slider.querySelector('.quote-track');
+        const quotes = track.querySelectorAll('.quote');
         
-        sliders.forEach(slider => {
-            const track = slider.querySelector('.quote-track');
-            const quotes = Array.from(track.children);
-            
-            // Function to calculate the interval for each quote
-            function calculateInterval(quote) {
-                const quoteLength = quote.textContent.length;
-                return quoteLength * characterDuration * 1000; // convert to milliseconds
-            }
-
-            // Function to set the slider interval
-            // function setSliderInterval() {
-            //     let currentIndex = 0;
-
-            //     function slide() {
-            //         const interval = calculateInterval(quotes[currentIndex]);
-            //         track.style.transitionDuration = `${interval / 1000}s`;
-            //         track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-            //         currentIndex = (currentIndex + 1) % quotes.length;
-
-            //         setTimeout(slide, interval);
-            //     }
-
-            //     slide();
-            // }
-
-            setSliderInterval();
+        // Clone quotes and append to track
+        quotes.forEach(quote => {
+            const clone = quote.cloneNode(true);
+            track.appendChild(clone);
         });
-    }
-
-    updateQuoteSliders();
+        
+        // Set the width of the track
+        const totalWidth = Array.from(quotes).reduce((sum, quote) => sum + quote.offsetWidth, 0);
+        track.style.width = `${totalWidth * 2}px`;
+        
+        // Adjust animation duration based on content width
+        const duration = totalWidth / 17; // Adjust 50 to change speed
+        track.style.animationDuration = `${duration}s`;
+    });
 });
 
 
