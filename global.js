@@ -195,7 +195,6 @@ function removeSpecificCSSRules() {
                         if (mediaQuery === '(max-width: 386px)' ||
                             mediaQuery === '(max-width: 344px)' ||
                             mediaQuery === '(max-width: 620px)') {
-                            alert("deleted"+i);
                             sheet.deleteRule(i); // Remove the rule
                         }
                     }
