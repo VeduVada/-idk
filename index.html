@@ -8,7 +8,7 @@
     <title>Enigma School Fest</title>
     <link rel="stylesheet" href="global.css">
     <style>
-        body 
+        body {
         display:flex;
         flex-direction:column;
         gap: 20px;
@@ -377,7 +377,15 @@ video{
 
     <script>
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth <= 523) {
+        // scale_logo();
+        // setTimeout(reverse_scale,1000);
+      openNav();
+        setTimeout(closeNav,1000);
+      
+    }
+});
       
         const video = document.getElementById('trailer');
         const muteButton = document.getElementById('mutebtn');
