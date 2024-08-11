@@ -414,7 +414,7 @@ font-size: 1.5em;
     padding: 20px;
     text-align: center;
 }
-@media (max-width:552px) {
+@media (max-width:523px) {
     html .navbar{  
      visibility: hidden;
  width: fit-content;
@@ -548,10 +548,4 @@ font-size: 1.5em;
 }
 .main-wrapper li li{
     list-style:circle;
-}
-@media (min-width:552px) {
-    .sidenav{
-        display: none;
-    }
-    
 }
