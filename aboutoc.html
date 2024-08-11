@@ -19,12 +19,21 @@
             
             max-width: 1200px;
             margin: 80px auto 0;
-            display: flex;
-            flex-direction: column;
+            /* display: grid;
+            grid-template-columns: 1fr 1fr; */
             /* padding: 20px; */
             /* padding-right: 20px; */
             /* padding-left: 20px;
             margin-right: 20px; */
+        }
+        .event-card{
+            max-width: 800px;
+        }
+        @media (max-width:800px) {
+            .container{
+                display: flex;
+            flex-direction: column;
+            }
         }
     
         h1 { 
@@ -206,333 +215,339 @@
       <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="./imgs/nhvpslogo.jpeg" alt=""></span>
     <!-- <div class="space"></div> -->
 
-    <div class="container">
-        <h1>About</h1>
-        <h1>Organizing </h1>
-        <h1 class="f">Committee</h1>
-        <div class="event-grid" id="eventGrid">
-
-            <!-- Event cards will be inserted here -->
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/saathvik.jpg" alt="SAATHVIK S PICTURE NOT GIVEN YET" class="event-image active">
-
-                    <img src="./imgs/jhanavi.jpg" alt="Organizers & HR" class="event-image active">
-                    <img src="./imgs/rhea.jpg" alt="Organizers & HR" class="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Organizers </h2>
-
-                    <div class="organizers">
-                        <div class="organizer">Jhanavi</div>
-                        <div class="organizer">Saatvik</div>
-                        <div class="organizer">Rhea</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <!-- <div class="quote">'I like kids' - Mayank</div> -->
-                            <!-- <div class="quote">"</div> -->
-                            <div class="quote">"Empowering creativity and excellence every day."</div>
-                            <div class="quote">"Building dreams through dedication and teamwork."</div>
-                            <div class="quote">"Creating opportunities for growth and innovation."</div>
-                            
-
+    <div class="supwrap">
+        <div class="spr"></div>
+        <div class="cent">
+            <div class="container">
+                <h1>About</h1>
+                <h1>Organizing </h1>
+                <h1 class="f">Committee</h1>
+                <div class="event-grid" id="eventGrid">
+        
+                    <!-- Event cards will be inserted here -->
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/saathvik.jpg" alt="SAATHVIK S PICTURE NOT GIVEN YET" class="event-image active">
+        
+                            <img src="./imgs/jhanavi.jpg" alt="Organizers & HR" class="event-image active">
+                            <img src="./imgs/rhea.jpg" alt="Organizers & HR" class="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Organizers </h2>
+        
+                            <div class="organizers">
+                                <div class="organizer">Jhanavi</div>
+                                <div class="organizer">Saatvik</div>
+                                <div class="organizer">Rhea</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <!-- <div class="quote">'I like kids' - Mayank</div> -->
+                                    <!-- <div class="quote">"</div> -->
+                                    <div class="quote">"Empowering creativity and excellence every day."</div>
+                                    <div class="quote">"Building dreams through dedication and teamwork."</div>
+                                    <div class="quote">"Creating opportunities for growth and innovation."</div>
+                                    
+        
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/sanjna.jpg" alt="Organizers & HR" class="event-image active">
-                    <img src="./imgs/mayank.jpg" alt="Organizers & HR" class="event-image">
-                    <img src="./imgs/lakshita.jpg" alt="Organizers & HR" class="event-image">
-
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name"> HR</h2>
-                    <div class="organizers">
-                        <div class="organizer">Lakshitha</div>
-                        <div class="organizer">Mayank</div>
-                        <div class="organizer">Sanjna</div>
-        
-        
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <div class="quote">"Empowering teams through effective leadership."</div>
-        <div class="quote">"Cultivating a culture of growth and opportunity."</div>
-        <div class="quote">"Championing the employee experience."</div>
-        
-        
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/sanjna.jpg" alt="Organizers & HR" class="event-image active">
+                            <img src="./imgs/mayank.jpg" alt="Organizers & HR" class="event-image">
+                            <img src="./imgs/lakshita.jpg" alt="Organizers & HR" class="event-image">
         
                         </div>
+                        <div class="event-info">
+                            <h2 class="event-name"> HR</h2>
+                            <div class="organizers">
+                                <div class="organizer">Lakshitha</div>
+                                <div class="organizer">Mayank</div>
+                                <div class="organizer">Sanjna</div>
+                
+                
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <div class="quote">"Empowering teams through effective leadership."</div>
+                <div class="quote">"Cultivating a culture of growth and opportunity."</div>
+                <div class="quote">"Championing the employee experience."</div>
+                
+                
+                
+                                </div>
+                            </div>
+                        </div>
+                    
+        
                     </div>
-                </div>
-            
-
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/aryan.jpg" alt="Astral Focus" class="event-image active">
-                    <img src="./imgs/saanvi.jpg" alt="Astral Focus" class="event-image">
-                    <img src="./imgs/rachana.jpg" alt="Astral Focus" class="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Astral Focus</h2>
-                    <div class="organizers">
-                        <div class="organizer">Aryan S Thampi</div>
-                        <div class="organizer">Saanvi</div>
-                        <div class="organizer">Rachana</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <div class="quote">"Capturing the universe, one frame at a time."</div>
-                            <div class="quote">"Through the lens, we see the infinite."</div>
-                            <div class="quote">"Every photograph is a story written in starlight."</div>
-                            <div class="quote">"Capturing the universe, one frame at a time."</div>
-                            <div class="quote">"Through the lens, we see the infinite."</div>
-                            <div class="quote">"Every photograph is a story written in starlight."</div>
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/aryan.jpg" alt="Astral Focus" class="event-image active">
+                            <img src="./imgs/saanvi.jpg" alt="Astral Focus" class="event-image">
+                            <img src="./imgs/rachana.jpg" alt="Astral Focus" class="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Astral Focus</h2>
+                            <div class="organizers">
+                                <div class="organizer">Aryan S Thampi</div>
+                                <div class="organizer">Saanvi</div>
+                                <div class="organizer">Rachana</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <div class="quote">"Capturing the universe, one frame at a time."</div>
+                                    <div class="quote">"Through the lens, we see the infinite."</div>
+                                    <div class="quote">"Every photograph is a story written in starlight."</div>
+                                    <div class="quote">"Capturing the universe, one frame at a time."</div>
+                                    <div class="quote">"Through the lens, we see the infinite."</div>
+                                    <div class="quote">"Every photograph is a story written in starlight."</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/vedant.jpg" alt="Cosmic Code Clash" class="event-image active">
-                    <img src="./imgs/smaran.jpg" alt="Cosmic Code Clash" class="event-image">
-                    <img src="./imgs/akarsh.jpg" alt="Cosmic Code Clash" class="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Cosmic Code </h2>
-                    <h2 class="event-name">Clash</h2>
-
-                    <div class="organizers">
-                        <div class="organizer">Vedant S</div>
-                        <div class="organizer">Smaran Smitha</div>
-                        <div class="organizer">Akarsh Raja</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <div class="quote">"Coding is the language of the cosmos."</div>
-                            <div class="quote">"In algorithms, we find the patterns of the universe."</div>
-                            <div class="quote">"Every bug fixed is a star aligned."</div>
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/vedant.jpg" alt="Cosmic Code Clash" class="event-image active">
+                            <img src="./imgs/smaran.jpg" alt="Cosmic Code Clash" class="event-image">
+                            <img src="./imgs/akarsh.jpg" alt="Cosmic Code Clash" class="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Cosmic Code </h2>
+                            <h2 class="event-name">Clash</h2>
+        
+                            <div class="organizers">
+                                <div class="organizer">Vedant S</div>
+                                <div class="organizer">Smaran Smitha</div>
+                                <div class="organizer">Akarsh Raja</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <div class="quote">"Coding is the language of the cosmos."</div>
+                                    <div class="quote">"In algorithms, we find the patterns of the universe."</div>
+                                    <div class="quote">"Every bug fixed is a star aligned."</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/mahek.jpg" alt="Supernova" class="event-image active">
-                    <img src="./imgs/maanya.jpg" alt="Supernova" class="event-image">
-                    <img src="./imgs/esha.jpg" alt="Supernova" class="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Supernova</h2>
-                    <div class="organizers">
-                        <div class="organizer">Mahek</div>
-                        <div class="organizer">Maanya</div>
-                        <div class="organizer">Esha</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <div class="quote">"Fashion that's out of this world."</div>
-                            <div class="quote">"Dressing the stars, one design at a time."</div>
-                            <div class="quote">"Where style meets the cosmos."</div>
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/mahek.jpg" alt="Supernova" class="event-image active">
+                            <img src="./imgs/maanya.jpg" alt="Supernova" class="event-image">
+                            <img src="./imgs/esha.jpg" alt="Supernova" class="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Supernova</h2>
+                            <div class="organizers">
+                                <div class="organizer">Mahek</div>
+                                <div class="organizer">Maanya</div>
+                                <div class="organizer">Esha</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <div class="quote">"Fashion that's out of this world."</div>
+                                    <div class="quote">"Dressing the stars, one design at a time."</div>
+                                    <div class="quote">"Where style meets the cosmos."</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/mydhili.jpg" alt="Celestial Artistry" class="event-image active">
-                    <img src="./imgs/vanshika.jpg" alt="Celestial Artistry" class="event-image">
-                    <img src="./imgs/shreya.jpg" alt="Celestial Artistry" class="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Celestial </h2>
-                    <h2 class="event-name"> Artistry</h2>
-
-                    <div class="organizers">
-                        <div class="organizer">Mydhilli</div>
-                        <div class="organizer">Vanshika</div>
-                        <div class="organizer">Shreya</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <div class="quote">"Art is the universe expressing itself."</div>
-                            <div class="quote">"Every stroke paints a new galaxy."</div>
-                            <div class="quote">"Creativity knows no celestial bounds."</div>
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/mydhili.jpg" alt="Celestial Artistry" class="event-image active">
+                            <img src="./imgs/vanshika.jpg" alt="Celestial Artistry" class="event-image">
+                            <img src="./imgs/shreya.jpg" alt="Celestial Artistry" class="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Celestial </h2>
+                            <h2 class="event-name"> Artistry</h2>
+        
+                            <div class="organizers">
+                                <div class="organizer">Mydhilli</div>
+                                <div class="organizer">Vanshika</div>
+                                <div class="organizer">Shreya</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <div class="quote">"Art is the universe expressing itself."</div>
+                                    <div class="quote">"Every stroke paints a new galaxy."</div>
+                                    <div class="quote">"Creativity knows no celestial bounds."</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/sangu2.jpg" alt="De Jure" class="event-image active">
-                    <img src="./imgs/sudiksha.jpg" alt="De Jure" class="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">De Jure</h2>
-                    <div class="organizers">
-                        <div class="organizer">Sudiksha</div>
-                        <div class="organizer">Sanghames</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <div class="quote">"Justice shines like the brightest star."</div>
-                            <div class="quote">"Upholding the laws of the universe."</div>
-                            <div class="quote">"Justice shines like the brightest star."</div>
-                            <div class="quote">"Upholding the laws of the universe."</div>
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/sangu2.jpg" alt="De Jure" class="event-image active">
+                            <img src="./imgs/sudiksha.jpg" alt="De Jure" class="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">De Jure</h2>
+                            <div class="organizers">
+                                <div class="organizer">Sudiksha</div>
+                                <div class="organizer">Sanghames</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <div class="quote">"Justice shines like the brightest star."</div>
+                                    <div class="quote">"Upholding the laws of the universe."</div>
+                                    <div class="quote">"Justice shines like the brightest star."</div>
+                                    <div class="quote">"Upholding the laws of the universe."</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/himesh.jpg" alt="Stellar Ventures" class="event-image active">
-                    <img src="./imgs/vishal.jpg" alt="Stellar Ventures" class="event-image">
-                    <img src="./imgs/dixit.jpeg" alt="Stellar Ventures" class ="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Stellar</h2>
-                    <h2 class="event-name">Ventures</h2>
-
-                    <div class="organizers">
-                        <div class="organizer">Himesh S Raju</div>
-                        <div class="organizer">Dixit</div>
-                        <div class="organizer">Vishal Lunawat</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <div class="quote">"Innovating the future of business."</div>
-                            <div class="quote">"Where strategic visions become reality."</div>
-                            <div class="quote">"Connecting ideas with opportunity."</div>
-                            <div class="quote">"Driving success through collaboration."</div>
-                         
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/himesh.jpg" alt="Stellar Ventures" class="event-image active">
+                            <img src="./imgs/vishal.jpg" alt="Stellar Ventures" class="event-image">
+                            <img src="./imgs/dixit.jpeg" alt="Stellar Ventures" class ="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Stellar</h2>
+                            <h2 class="event-name">Ventures</h2>
+        
+                            <div class="organizers">
+                                <div class="organizer">Himesh S Raju</div>
+                                <div class="organizer">Dixit</div>
+                                <div class="organizer">Vishal Lunawat</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <div class="quote">"Innovating the future of business."</div>
+                                    <div class="quote">"Where strategic visions become reality."</div>
+                                    <div class="quote">"Connecting ideas with opportunity."</div>
+                                    <div class="quote">"Driving success through collaboration."</div>
+                                 
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/sanath.jpg" alt="Stardust Serenade" class="event-image active">
-                    <img src="./imgs/sid.jpg" alt="Stardust Serenade" class="event-image">
-                    <img src="./imgs/dhruti.jpg" alt="Stardust Serenade" class="event-image">
-                    <img src="./imgs/triya.jpg" alt="Stardust Serenade" class="event-image">
-                    <img src="./imgs/aditi.jpg" alt="Stardust Serenade" class="event-image">
-                    <img src="./imgs/krisha.jpg" alt="Stardust Serenade" class="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Stardust</h2>
-                    <h2 class="event-name">Serenade</h2>
-
-                    <div class="organizers">
-                        <div class="organizer">Siddaratha</div>
-                        <div class="organizer">Sanath</div>
-                        <div class="organizer">Aditi</div>
-                        <div class="organizer">Dhruti</div>
-                        <div class="organizer">Triya</div>
-                        <div class="organizer">Krisha</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <div class="quote">"Talents that shine brighter than stars."</div>
-                            <div class="quote">"Performing across the cosmos."</div>
-                            <div class="quote">"Where every act is out of this world."</div>
-                            <!-- <div class="quote">'Everyone wants to know, what would I do if I didn't win… I guess we'll never know' - Siddhartha</div> -->
-                            <!-- <div class="quote">'I hold my shit during Violin concerts' - Sanath</div> -->
-                            <div class="quote">"Where every act shines bright."</div>
-                            <div class="quote">"Unveiling hidden talents and stars."</div>
-                            <div class="quote">"A stage where dreams take the spotlight."</div>
-                            
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/sanath.jpg" alt="Stardust Serenade" class="event-image active">
+                            <img src="./imgs/sid.jpg" alt="Stardust Serenade" class="event-image">
+                            <img src="./imgs/dhruti.jpg" alt="Stardust Serenade" class="event-image">
+                            <img src="./imgs/triya.jpg" alt="Stardust Serenade" class="event-image">
+                            <img src="./imgs/aditi.jpg" alt="Stardust Serenade" class="event-image">
+                            <img src="./imgs/krisha.jpg" alt="Stardust Serenade" class="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Stardust</h2>
+                            <h2 class="event-name">Serenade</h2>
+        
+                            <div class="organizers">
+                                <div class="organizer">Siddaratha</div>
+                                <div class="organizer">Sanath</div>
+                                <div class="organizer">Aditi</div>
+                                <div class="organizer">Dhruti</div>
+                                <div class="organizer">Triya</div>
+                                <div class="organizer">Krisha</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <div class="quote">"Talents that shine brighter than stars."</div>
+                                    <div class="quote">"Performing across the cosmos."</div>
+                                    <div class="quote">"Where every act is out of this world."</div>
+                                    <!-- <div class="quote">'Everyone wants to know, what would I do if I didn't win… I guess we'll never know' - Siddhartha</div> -->
+                                    <!-- <div class="quote">'I hold my shit during Violin concerts' - Sanath</div> -->
+                                    <div class="quote">"Where every act shines bright."</div>
+                                    <div class="quote">"Unveiling hidden talents and stars."</div>
+                                    <div class="quote">"A stage where dreams take the spotlight."</div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/shradha.jpg" alt="Agree to Disagree" class="event-image active">
-                    <img src="./imgs/abhed.jpg" alt="Agree to Disagree" class="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Agree to</h2>
-                    <h2 class="event-name">Disagree</h2>
-
-                    <div class="organizers">
-                        <div class="organizer">Shradha</div>
-                        <div class="organizer">Abhed</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <!-- <div class="quote">"Work until you no longer have to introduce yourself." - Shradha</div> -->
-                            <!-- <div class="quote">"Argue for your limitations and they will be yours." - Abhed</div> -->
-                            <!-- <div class="quote">"Navigating the economic cosmos."</div/ -->
-                                <div class="quote">"Where justice and integrity prevail."</div>
-<div class="quote">"Navigating the complexities of the law."</div>
-<div class="quote">"Defending rights, shaping futures."</div>
-<div class="quote">"In pursuit of truth and fairness."</div>
-
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/shradha.jpg" alt="Agree to Disagree" class="event-image active">
+                            <img src="./imgs/abhed.jpg" alt="Agree to Disagree" class="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Agree to</h2>
+                            <h2 class="event-name">Disagree</h2>
+        
+                            <div class="organizers">
+                                <div class="organizer">Shradha</div>
+                                <div class="organizer">Abhed</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <!-- <div class="quote">"Work until you no longer have to introduce yourself." - Shradha</div> -->
+                                    <!-- <div class="quote">"Argue for your limitations and they will be yours." - Abhed</div> -->
+                                    <!-- <div class="quote">"Navigating the economic cosmos."</div/ -->
+                                        <div class="quote">"Where justice and integrity prevail."</div>
+        <div class="quote">"Navigating the complexities of the law."</div>
+        <div class="quote">"Defending rights, shaping futures."</div>
+        <div class="quote">"In pursuit of truth and fairness."</div>
+        
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/adith.jpg" alt="Calypso Crisis Management" class="event-image active">
-                    <img src="./imgs/ashwin.jpg" alt="Calypso Crisis Management" class="event-image">
-                    <img src="./imgs/nikhil.jpg" alt="Calypso Crisis Management" class="event-image">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Calypso Crisis</h2>
-                    <h2 class="event-name">Management</h2>
-
-                    <div class="organizers">
-                        <div class="organizer">Adith</div>
-                        <div class="organizer">Nikhil</div>
-                        <div class="organizer">Ashwin</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <!-- <div class="quote">'I like to eat chawanprash every night before bed' - Ashwin</div> -->
-                            <!-- <div class="quote">'Old Monk is the only guru I listen to' - Adith</div> -->
-                            <div class="quote">"Where interstellar deals are made."</div>
-                            <div class="quote">"Commerce at the speed of light."</div>
-                            <div class="quote">"Navigating the economic cosmos."</div>
-                            
-                            <!-- <div class="quote">'Mosranna is my favorite' - Nikhil"</div> -->
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/adith.jpg" alt="Calypso Crisis Management" class="event-image active">
+                            <img src="./imgs/ashwin.jpg" alt="Calypso Crisis Management" class="event-image">
+                            <img src="./imgs/nikhil.jpg" alt="Calypso Crisis Management" class="event-image">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Calypso Crisis</h2>
+                            <h2 class="event-name">Management</h2>
+        
+                            <div class="organizers">
+                                <div class="organizer">Adith</div>
+                                <div class="organizer">Nikhil</div>
+                                <div class="organizer">Ashwin</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <!-- <div class="quote">'I like to eat chawanprash every night before bed' - Ashwin</div> -->
+                                    <!-- <div class="quote">'Old Monk is the only guru I listen to' - Adith</div> -->
+                                    <div class="quote">"Where interstellar deals are made."</div>
+                                    <div class="quote">"Commerce at the speed of light."</div>
+                                    <div class="quote">"Navigating the economic cosmos."</div>
+                                    
+                                    <!-- <div class="quote">'Mosranna is my favorite' - Nikhil"</div> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-images">
-                    <img src="./imgs/samhita.jpg" alt="Luminous Literature" class="event-image active">
-                </div>
-                <div class="event-info">
-                    <h2 class="event-name">Luminous </h2>
-                    <h2 class="event-name">Literature</h2>
-
-                    <div class="organizers">
-                        <div class="organizer">Samhita</div>
-                    </div>
-                    <div class="quote-slider">
-                        <div class="quote-track">
-                            <div class="quote">"Where words come alive and stories transcend time."</div>
-<div class="quote">"Crafting worlds with the power of imagination and prose."</div>
-<div class="quote">"In every book, a universe awaits to be discovered."</div>
-<div class="quote">"Every page turned is a step into a new realm of wonder."</div>
-<div class="quote">"Literature: the art of painting with words and emotions."</div>
-
-
+                    <div class="event-card">
+                        <div class="event-images">
+                            <img src="./imgs/samhita.jpg" alt="Luminous Literature" class="event-image active">
+                        </div>
+                        <div class="event-info">
+                            <h2 class="event-name">Luminous </h2>
+                            <h2 class="event-name">Literature</h2>
+        
+                            <div class="organizers">
+                                <div class="organizer">Samhita</div>
+                            </div>
+                            <div class="quote-slider">
+                                <div class="quote-track">
+                                    <div class="quote">"Where words come alive and stories transcend time."</div>
+        <div class="quote">"Crafting worlds with the power of imagination and prose."</div>
+        <div class="quote">"In every book, a universe awaits to be discovered."</div>
+        <div class="quote">"Every page turned is a step into a new realm of wonder."</div>
+        <div class="quote">"Literature: the art of painting with words and emotions."</div>
+        
+        
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-         
                  
-                                                                                    
-            <!-- Repeat the above event-card structure for each event, changing the content accordingly -->
+                         
+                                                                                            
+                    <!-- Repeat the above event-card structure for each event, changing the content accordingly -->
+                </div>
+            </div>
         </div>
+        <div class="spl"></div>
     </div>
     <!-- <div class="check"></div> -->
 
