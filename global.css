@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .navbar a .logo{
     width: 84px;
     height: 60px;
