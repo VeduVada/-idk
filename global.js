@@ -48,10 +48,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
+    // document.getElementById("homepagebtn").style.fontSize="15px";                                            
+    
   }
   
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("homepagebtn").style.fontSize="0px";
+
   }
   
   // Example using JavaScript to remove an element on resize

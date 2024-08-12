@@ -30,6 +30,9 @@ body {
     opacity: 0.6;
 }
 @media (max-width:523px) {
+    .supwrap .spr{
+        width: 25px;
+    }
    html .navbar{  
     visibility: hidden;
 width: fit-content;
@@ -98,7 +101,18 @@ margin-left: 15px;
         
       }
 
+      
 }
+@media (max-width:375px) {
+    .supwrap .spr{
+        width: 20px;
+    }
+    .supwrap .spl{
+        width: 0;
+    }
+}
+
+
 span{
 
     transform: translateX(-1000%);
@@ -223,7 +237,7 @@ section h2 {
     padding-top: 10px;
     padding-bottom: 10px;
      }
-     .supwrap{
+     .supwrap{ 
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
     
@@ -517,7 +531,9 @@ font-size: .8em;
         display: none; /* Hide the mobile menu button on larger screens */
     }
 }
-@media (max-width:405px) {
-    
+@media (max-width:800px) {
+    .event-card{
+        width: 80vw;
+    }
     
 }
