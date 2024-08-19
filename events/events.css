@@ -561,3 +561,7 @@ font-size: 1.5em;
 .eventoutline h1{
     padding-left: 10px;
 }
+.notice{
+    /* background-color: #171717; */
+    border-radius: 10px;
+}
